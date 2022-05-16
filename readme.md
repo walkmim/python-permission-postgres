@@ -1,8 +1,8 @@
-Author: Walisson Alkmim
-Versão: 1.0
-Data: 15/05/2022
+Author: Walisson Alkmim<br>
+Versão: 1.0<br>
+Data: 15/05/2022<br>
 
-Requisitos:
+<h3><b>Requisitos:</b>
 * Ter usário com permissão de: 
     * Criar e gerenciar roles 
     * Criar e gerenciar schemas 
