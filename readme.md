@@ -53,7 +53,7 @@ python3 rds_python_permission_automation.py \
 --role_password ${role_password}
 ```
 
-<h3><b>Exemplo da execução::</b></h3></br></br>
+<h3><b>Exemplo da execução:</b></h3></br>
 
 ```eclipse
 host=rdszm.c3iie8ju3iaa.us-east-1.rds.amazonaws.com</br>
@@ -71,4 +71,22 @@ python3 rds_python_permission_automation.py \
 --role_name ${role_name} \
 --role_password ${role_password}
 ```
-<h3><b>Obrigado!</b></h3>
+
+<h3><b>Código para validar permissão concedida no Postgres:</b></h3></br>
+
+```sql
+select  
+  r.usename as grantor, e.usename as grantee, nspname, privilege_type, is_grantable
+from pg_namespace
+join lateral (
+  SELECT
+    *
+  from
+    aclexplode(nspacl) as x
+) a on true
+join pg_user e on a.grantee = e.usesysid
+join pg_user r on a.grantor = r.usesysid 
+where e.usename = 'carlos.henrique';
+```
+
+</b><h3><b>Obrigado!</b></h3>
