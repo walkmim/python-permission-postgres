@@ -36,7 +36,7 @@ Data: 15/05/2022</br>
 
  * No terminal escolhido, navegue até o diretorio do repositório</br>
  * Abaixo mapa da execução do script, substitua os parâmetros entre <> pelos respectivos valores:</br></br>
-```
+```eclipse
 host=<RDS_Write_Endpoint></br>
 port=<RDS_Port></br>
 pg_user_name=<RDS_Admin_User></br>
@@ -55,7 +55,7 @@ python3 rds_python_permission_automation.py \
 
 <h3><b>Exemplo da execução::</b></h3></br></br>
 
-```
+```eclipse
 host=rdszm.c3iie8ju3iaa.us-east-1.rds.amazonaws.com</br>
 port=5432</br>
 pg_user_name=postgres</br>
